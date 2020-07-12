@@ -19,7 +19,6 @@ body {
     margin-top: 1px;
 }
 .catalog {
-    border: 1px solid #f00;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -32,7 +31,6 @@ body {
     background-color: rgba(0, 0, 0, 0);
 }
 .CatalogItem {
-    border: 1px solid blue;
     width: 165px;
     margin: 1px 10px;
 }
