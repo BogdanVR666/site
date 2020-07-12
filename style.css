@@ -1,7 +1,7 @@
 body {
     font-family: Arial,Monospace;
     background-image: linear-gradient(to top, rgb(0, 120, 120), rgb(120, 0, 120));
-    background-size: 100%;
+    background-size: auto;
     font-size: 12px;
     color: #FFF;
     text-shadow: 0 0 2px #fff, 0 0 4px #fff;
