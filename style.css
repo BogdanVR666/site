@@ -19,8 +19,8 @@ h1, h2, h3, h4, h5, h6 {font-size: inherit;}
 
 body {
     font-family: Arial,Monospace;
-    background-color: aqua;
-    /* background-image: linear-gradient(to top, rgb(0, 120, 120), rgb(120, 0, 120)); */
+    /* background-color: aqua; */
+    background-image: linear-gradient(to top, rgb(0, 120, 120), rgb(120, 0, 120));
     font-size: 12px;
     color: #FFF;
     text-shadow: 0 0 2px #fff, 0 0 4px #fff;
