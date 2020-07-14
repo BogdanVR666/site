@@ -53,6 +53,7 @@ body {
     width: 160px;
     border-radius: 10px;
     white-space: normal;
+    font-size: 16px;
     background-image: linear-gradient(to right, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0));
     background-color: violet;
 }
