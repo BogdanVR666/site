@@ -45,7 +45,6 @@ body {
     font-size: 12px;
     color: #FFF;
     text-shadow: 0 0 2px #fff, 0 0 4px #fff;
-    -webkit-box-shadow: 0 0 2px #fff, 0 0 4px #fff;
     text-align: center;
 }
 .header, .content {
@@ -77,37 +76,30 @@ body {
     width: 165px;
     margin: 1px 10px;
 }
-.read_more {
+.read_more, .bascket {
     border-radius: 10px;
     padding: 5px;
     margin: 5px;
-    background-color: aqua;
     color: black;
-    box-shadow: 0 0 2px aqua, 0 0 4px aqua, 0 0 6px aqua;
     transition: .5s;
 }
-.read_more:hover {
+.read_more:hover, .bascket:hover {
     box-shadow: 0 0 2px #0ff, 0 0 4px #0ff,
                 0 0 6px #0ff, 0 0 8px #0ff,
                 0 0 10px #0ff, 0 0 12px #0ff;
     transition-delay: .5s;
 }
 .bascket {
-    border-radius: 10px;
-    padding: 5px;
-    margin: 5px;
-    background-color: yellow;
-    color: black;
     text-shadow: none;
-    box-shadow: 0 0 2px yellow, 0 0 4px yellow, 0 0 6px yellow;
-    transition: .5s;
+    box-shadow: 0 0 2px #ff0, 0 0 4px #ff0, 0 0 6px #ff0;
+    -webkit-box-shadow: 0 0 2px #ff0, 0 0 4px #ff0, 0 0 6px #ff0;
+    -moz-box-shadow: 0 0 2px #ff0, 0 0 4px #ff0, 0 0 6px #ff0;
 }
-.bascket:hover {
-    box-shadow: 0 0 2px #ff0, 0 0 4px #ff0,
-                0 0 6px #ff0, 0 0 8px #ff0,
-                0 0 10px #ff0, 0 0 12px #ff0;
+.read_more {
     text-shadow: none;
-    transition-delay: .5s;
+    box-shadow: 0 0 2px #0ff, 0 0 4px #0ff, 0 0 6px #0ff;
+    -webkit-box-shadow: 0 0 2px #0ff, 0 0 4px #0ff, 0 0 6px #0ff;
+    -moz-box-shadow: 0 0 2px #0ff, 0 0 4px #0ff, 0 0 6px #0ff;
 }
 a {
    	color: #0ff;
@@ -116,8 +108,7 @@ a {
     transition: .5s;
 }
 a:hover {
-    text-shadow: 0 0 2px #0ff, 0 0 4px #0ff,
-                 0 0 6px #0ff, 0 0 8px #0ff,
-                 0 0 10px #0ff, 0 0 12px #0ff;
+    text-shadow: 0 0 2px #0ff, 0 0 4px #0ff,0 0 6px #0ff,
+                 0 0 8px #0ff, 0 0 10px #0ff, 0 0 12px #0ff;
     transition-delay: .5s;
 }
