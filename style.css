@@ -1,6 +1,5 @@
 /* === ОБНУЛЕНИЕ === */
 * {padding: 0; margin: 0; border: 0;}
-*:focus, *:active {outline: none;}
 a:focus, a:active {outline: none;}
 nav, footer, header, aside {display: block;}
 html, body { 
@@ -9,9 +8,9 @@ html, body {
     font-size-adjust: 100%; 
     line-height: 1; 
     font-size: 14px; 
-    -ms-font-size-adjust: 100%; 
+    /*-ms-font-size-adjust: 100%; 
     -moz-font-size-adjust: 100%; 
-    -webkit-font-size-adjust: 100%;
+    -webkit-font-size-adjust: 100%;*/
 }
 input, button, textarea {
     font-family: inherit;
@@ -30,9 +29,6 @@ a, a:visited {
     ul li {
         list-style: none;
     }
-}
-img {
-    vertical-align: top;
 }
 h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
@@ -56,6 +52,7 @@ body {
     background-color: violet;
 }
 .content {
+    font-size: 14px;
     text-align: left;
     margin-top: 1px;
 }
