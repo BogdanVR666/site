@@ -88,5 +88,4 @@ function HoverSlider(jQweryObject) {
 }
 
 HoverSlider($('.header'));
-$('CatalogItem').width(165);
 $('.content').append('<br/><br/><a class="read_more" href="#">подробнее</a><a class="bascket" href="#">в корзину</a>');
