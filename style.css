@@ -38,24 +38,19 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     font-family: Arial,Monospace;
-    background-image: linear-gradient(to top, #007878, #780078);
+    background-image: linear-gradient(to bottom, #007878, #780078);
     background-repeat-y: no-repeat;
-    font-size: 12px;
+    font-size: 14px;
     color: #FFF;
     text-shadow: 0 0 2px #fff, 0 0 4px #fff;
     text-align: center;
 }
-.header, .content {
+.Catalog__header, .Catalog__content {
     padding: 10px;
     border-radius: 10px;
     white-space: normal;
-    font-size: 16px;
     background-image: linear-gradient(to right, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0));
     background-color: violet;
-}
-.content {
-    text-align: left;
-    margin-top: 1px;
 }
 .catalog {
     display: flex;
@@ -64,13 +59,10 @@ body {
     display: -ms-flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: normal;
     padding: 0px;
     margin: 0 -5px;
     border-radius: 0px;
     width: 100%;
-    background-image: none;
-    background-color: rgba(0, 0, 0, 0);
 }
 .CatalogItem {
     width: 170px;
@@ -80,22 +72,36 @@ body {
     border-radius: 10px;
     padding: 5px;
     margin: 5px;
+    margin-bottom: 7px;
+    font-size: 11px;
     color: black;
     transition: .5s;
 }
-.read_more:hover, .bascket:hover {
+.Catalog__content {
+    text-align: left;
+}
+.read_more:hover {
     box-shadow: 0 0 2px #0ff, 0 0 4px #0ff,
                 0 0 6px #0ff, 0 0 8px #0ff,
                 0 0 10px #0ff, 0 0 12px #0ff;
     transition-delay: .5s;
 }
 .bascket {
+    background-color: #ff0;
     text-shadow: none;
     box-shadow: 0 0 2px #ff0, 0 0 4px #ff0, 0 0 6px #ff0;
     -webkit-box-shadow: 0 0 2px #ff0, 0 0 4px #ff0, 0 0 6px #ff0;
     -moz-box-shadow: 0 0 2px #ff0, 0 0 4px #ff0, 0 0 6px #ff0;
 }
+.bascket:hover {
+    box-shadow: 0 0 2px #ff0, 0 0 4px #ff0, 0 0 6px #ff0, 
+                0 0 8px #ff0, 0 0 10px #ff0, 0 0 12px #ff0;
+    text-shadow: 0 0 2px #ff0, 0 0 4px #ff0, 0 0 6px #ff0, 
+                 0 0 8px #ff0, 0 0 10px #ff0, 0 0 12px #ff0;
+    transition-delay: .5s;
+}
 .read_more {
+    background-color: #0ff;
     text-shadow: none;
     box-shadow: 0 0 2px #0ff, 0 0 4px #0ff, 0 0 6px #0ff;
     -webkit-box-shadow: 0 0 2px #0ff, 0 0 4px #0ff, 0 0 6px #0ff;
@@ -114,7 +120,16 @@ a:hover {
 }
 @media(max-width: 400px;) {
     .CatalogItem {
-        max-width: 40%;
-        width: 35%;
+        
+    }
+}
+@keyframes slider {
+    0% {
+        border-bottom-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    100% {
+        border-bottom-left-radius: 0px;
+        border-bottom-left-radius: 0px;
     }
 }
