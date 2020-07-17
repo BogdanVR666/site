@@ -1,4 +1,4 @@
-$('.Catalog__content').hide();
+$('.catalog__content').hide();
 
 function GetAppIndex(string) {
     if(navigator.appVersion.indexOf(string) <= 0) {
@@ -25,35 +25,35 @@ function HoverSlider(jQweryObject) {
        (GetOS() === 'MacOS') || 
        (GetOS() === 'Linux')) {
         jQweryObject.on('mouseover', function() {
-            $(this).next('.Catalog__content').slideDown();
+            $(this).next('.catalog__content').slideDown();
             $(this).css({
                 'border-bottom-right-radius': '0px',
                 'border-bottom-left-radius': '0px',
             });
-            $(this).next('.Catalog__content').css({
+            $(this).next('.catalog__content').css({
                 'border-top-left-radius': '0px',
                 'border-top-right-radius': '0px',
             });
         });
         jQweryObject.next().on('mouseover', function() {
-            $(this).next('.Catalog__content').slideDown();
+            $(this).next('.catalog__content').slideDown();
             $(this).css({
                 'border-bottom-right-radius': '0px',
                 'border-bottom-left-radius': '0px',
             });
-            $(this).next('.Catalog__content').css({
+            $(this).next('.catalog__content').css({
                 'border-top-left-radius': '0px',
                 'border-top-right-radius': '0px',
             });
         });
         jQweryObject.on('mouseout', function() {
-            $(this).next().on('mouseout', function() {
-                $(this).next('.Catalog__content').slideUp();
+            $(this).next('.catalog__content').on('mouseout', function() {
+                $(this).next('.catalog__content').slideUp();
                 $(this).css({
                     'border-bottom-right-radius': '10px',
                     'border-bottom-left-radius': '10px',
                 });
-                $(this).next('.Catalog__content').css({
+                $(this).next('.catalog__content').css({
                     'border-top-left-radius': '10px',
                     'border-top-right-radius': '10px',
                 });
@@ -62,23 +62,23 @@ function HoverSlider(jQweryObject) {
     }
     jQweryObject.on('click', function() {
         if(Clicked == false) {
-            $(this).next('.Catalog__content').slideDown();
+            $(this).next('.catalog__content').slideDown();
             $(this).css({
                 'border-bottom-right-radius': '0px',
                 'border-bottom-left-radius': '0px',
             });
-            $(this).next('.Catalog__content').css({
+            $(this).next('.catalog__content').css({
                 'border-top-left-radius': '0px',
                 'border-top-right-radius': '0px',
             });
             Clicked = true;
         } else {
-            $(this).next('.Catalog__content').slideUp();
+            $(this).next('.catalog__content').slideUp();
             $(this).css({
                 'border-bottom-right-radius': '10px',
                 'border-bottom-left-radius': '10px',
             });
-            $(this).next('.Catalog__content').css({
+            $(this).next('.catalog__content').css({
                 'border-top-left-radius': '10px',
                 'border-top-right-radius': '10px',
             });
@@ -87,5 +87,5 @@ function HoverSlider(jQweryObject) {
     });
 }
 
-HoverSlider($('.Catalog__header'));
-$('.Catalog__content').append('<br/><br/><a class="read_more" href="#">подробнее</a><a class="bascket" href="#">в корзину</a>');
+HoverSlider($('.catalog__header'));
+$('.catalog__content').append('');
