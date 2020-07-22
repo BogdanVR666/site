@@ -1,18 +1,18 @@
-/* === ОБНУЛЕНИЕ === */
+/* ======= ОБНУЛЕНИЕ ======= */
 * {padding: 0; margin: 0; border: 0;}
 *:focus, *:active {outline: none;}
 a:focus, a:active {outline: none;}
 nav, footer, header, aside {display: block;}
 html, body {min-height: 100%; min-width: 100%;font-size: 100%; font-size: 14px;
-    line-height: 1; -ms-font-size-adjust: 100%; 
-    -moz-font-size-adjust: 100%; -webkit-font-size-adjust: 100%;}
+    line-height: 1; -ms-font-size-adjust: 100%; -moz-font-size-adjust: 100%;
+    -webkit-font-size-adjust: 100%;}
 input, button, textarea {font-family: inherit;}
 input:-ms-clear {display: none;}
 button {cursor: pointer;}
 button:-moz-focus-inner {padding: 0; border: 0;}
 ul li {list-style: none;}
 h1, h2, h3, h4, h5, h6 {font-size: inherit;}
-/* === ОБНУЛЕНИЕ === */
+/* ======= ОБНУЛЕНИЕ ======= */
 
 body {
     font-family: Arial, Monospace;
@@ -33,30 +33,57 @@ a:hover {
                  0 0 8px #0ff, 0 0 10px #0ff, 0 0 12px #0ff;
     transition-delay: .5s;
 }
-.catalog {
+.catalog__body {
     display: flex;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 0px;
-    margin: 0 -5px;
-    border-radius: 0px;
     text-align: center;
     width: 100%;
 }
-.CatalogItem {
-    width: 44%;
-    margin: 1px 10px;
+.item {
+    flex: 0 1 24%;
+    margin-bottom: 1px;
 }
-.catalog__header, .catalog__content {
+@media (min-width: 1024px) {
+    .item {
+        flex: 0 1 --%;
+    }
+}
+@media (max-width: 990px) {
+    .item {
+        flex: 0 1 24.5%;
+    }
+}
+@media (max-width: 500px) {
+    .item {
+        flex: 0 1 49.5%;
+    }
+}
+.item__header, .item__content {
     padding: 10px;
     border-radius: 10px;
     white-space: normal;
-    background-image: linear-gradient(to right, red, violet);
+    background-image: url("../images/bg_repeat.jpg")/*linear-gradient(to right, red, violet)*/;
+    background-position: top left;
 }
-a.links__read_more, a.links__bascket {
+.item__header {
+    background-position: bottom left;
+    margin-bottom: 1px;
+}
+.on-click {
+    animation: slider .5s linear 1 normal running 0s forwards;
+}
+.on-unclick {
+    animation: slider .5s linear 1 reverse running 0s none;
+}
+.content__on-click {
+    animation: content-slider .5s linear 1 normal running 0s forwards;
+}
+.content__on-unclick {
+    animation: content-slider .5s linear 1 reverse;
+}
+a.item__read_more, a.item__bascket {
     border-radius: 10px;
     padding: 5px;
     margin: 0 auto;
@@ -66,29 +93,34 @@ a.links__read_more, a.links__bascket {
     color: black;
     transition: .5s;
 }
-a.links__bascket {
+a.item__bascket {
     background-color: #ff0;
     text-shadow: none;
     box-shadow: 0 0 2px #ff0, 0 0 4px #ff0, 0 0 6px #ff0;
     -webkit-box-shadow: 0 0 2px #ff0, 0 0 4px #ff0, 0 0 6px #ff0;
     -moz-box-shadow: 0 0 2px #ff0, 0 0 4px #ff0, 0 0 6px #ff0;
 }
-a.links__read_more {
+a.item__read_more {
     background-color: #0ff;
     text-shadow: none;
     box-shadow: 0 0 2px #0ff, 0 0 4px #0ff, 0 0 6px #0ff;
     -webkit-box-shadow: 0 0 2px #0ff, 0 0 4px #0ff, 0 0 6px #0ff;
     -moz-box-shadow: 0 0 2px #0ff, 0 0 4px #0ff, 0 0 6px #0ff;
 }
-
-a.links__bascket:hover {
+a.item__bascket:before {
+    content: "в корзину";
+}
+a.item__read_more:before {
+    content: "подробнее";
+}
+a.item__bascket:hover {
     box-shadow: 0 0 2px #ff0, 0 0 4px #ff0, 0 0 6px #ff0, 
                 0 0 8px #ff0, 0 0 10px #ff0, 0 0 12px #ff0;
     text-shadow: 0 0 2px #ff0, 0 0 4px #ff0, 0 0 6px #ff0, 
                  0 0 8px #ff0, 0 0 10px #ff0, 0 0 12px #ff0;
     transition-delay: .5s;
 }
-a.links__read_more:hover {
+a.item__read_more:hover {
     box-shadow: 0 0 2px #0ff, 0 0 4px #0ff, 0 0 6px #0ff, 
                 0 0 8px #0ff, 0 0 10px #0ff, 0 0 12px #0ff;
     -moz-box-shadow: 0 0 2px #0ff, 0 0 4px #0ff, 0 0 6px #0ff, 
@@ -102,8 +134,26 @@ a.links__read_more:hover {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
+    50% {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
     100% {
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
+    }
+}
+@keyframes content-slider {
+    0% {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    50% {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    100% {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
     }
 }
