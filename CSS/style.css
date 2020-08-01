@@ -42,20 +42,20 @@ a:hover {
     width: 100%;
 }
 .item {
-    flex: 0 1 24%;
+    flex: 0 1 33%;
     margin-bottom: 1px;
-}
-@media (min-width: 1024px) {
+}/*
+@media (max-width: 1024px) {
     .item {
-        flex: 0 1 33.33333%;
+        flex: 0 1 33%;
     }
 }
 @media (max-width: 990px) {
     .item {
-        flex: 0 1 24.5%;
+        flex: 0 1 33%;
     }
-}
-@media (max-width: 500px) {
+}*/
+@media (min-width: 500px) {
     .item {
         flex: 0 1 49.5%;
     }
@@ -64,7 +64,11 @@ a:hover {
     padding: 10px;
     border-radius: 10px;
     white-space: normal;
-    background-image: url("../images/bg_repeat.jpg")/*linear-gradient(to right, red, violet)*/;
+    background-image: url("images/bg_repeat.jpg");
+    background-image: -webkit-linear-gradient(to right, red, violet);
+    background-image: -moz-linear-gradient(to right, red, violet);
+    background-image: -o-linear-gradient(to right, red, violet);
+    background-image: linear-gradient(to right, red, violet);
     background-position: top left;
 }
 .item__header {
