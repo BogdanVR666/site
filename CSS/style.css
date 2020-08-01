@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {font-size: inherit;}
 body {
     font-family: Arial, Monospace;
     background-image: linear-gradient(to bottom, #007878, #000078);
-    background-repeat-y: no-repeat;
+    background-repeat: no-repeat;
     font-size: 14px;
     color: #FFF;
     text-shadow: 0 0 2px #fff, 0 0 4px #fff;
@@ -47,7 +47,7 @@ a:hover {
 }
 @media (min-width: 1024px) {
     .item {
-        flex: 0 1 --%;
+        flex: 0 1 33.33333%;
     }
 }
 @media (max-width: 990px) {
@@ -75,7 +75,7 @@ a:hover {
     animation: slider .5s linear 1 normal running 0s forwards;
 }
 .on-unclick {
-    animation: slider .5s linear 1 reverse running 0s none;
+    animation: slider .5s linear 1 reverse;
 }
 .content__on-click {
     animation: content-slider .5s linear 1 normal running 0s forwards;
