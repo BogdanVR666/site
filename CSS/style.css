@@ -43,7 +43,7 @@ body {
     width: 100%;
 }
 .item {
-    background-image: url('../images/bg_repeat.jpg');
+    background-image: url('bg_repeat.jpg');
     border-radius: 10px;
     overflow: hidden;
     flex: 0 1 28%;
