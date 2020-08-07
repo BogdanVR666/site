@@ -1,10 +1,8 @@
-$('.item__content').hide();
-
-$('.item__header').on('click', function() {
-    $(this).toggleClass('on-unclick');
-    $(this).toggleClass('on-click');
-    $(this).next('.item__content').toggleClass('content__on-click');
-    $(this).next('.item__content').toggleClass('content__on-unclick');
-    $(this).next('.item__content').slideToggle(500);
+$('.item__content').hide(); /*$('.item__price').hide();*/
+$('.item__title').on('click', function() {
+    if($('.catalog').hasClass('one')) {
+        $('.item__title').not($(this)).removeClass('active');
+        $('.item__content').not($(this).next()).slideUp(500);
+    }
+    $(this).toggleClass('active').next('.item__content').slideToggle(500);
 });
-console.log($(window).height());
