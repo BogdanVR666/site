@@ -53,6 +53,7 @@ body {
     margin-bottom: 5px;
 }
 .item__title {
+    font-size: 16px;
     position: relative;
 }
 .item__title:before, 
