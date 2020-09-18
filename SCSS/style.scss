@@ -1,0 +1,99 @@
+@import "nullstyle";
+body {
+    font-family: Arial, monospace;
+    color: white;
+    background-image: -webkit-linear-gradient(to bottom, #007878, #000078);
+    background-image: -moz-linear-gradient(to bottom, #007878, #000078);
+    background-image: -o-linear-gradient(to bottom, #007878, #000078);
+    background-image: linear-gradient(to bottom, #007878, #000078);
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.catalog {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    &__header {
+        font-size: 15px;
+        width: 100%;
+        padding: 13px;
+        background-color: rgba(255, 255, 255, .4);
+        border-radius: 10px;
+        margin: 3.5px 7px;
+        color: #00FFB0;
+        text-shadow: 0 0 2px #00FFB0;
+    }
+    &__body {
+        color: #666;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    &__item {
+        padding: 10px;
+        margin: 3.5px 7px;
+    }
+}
+
+.item {
+    background-image: url('../images/bg_repeat.jpg');
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 0 1 100%;
+    &__title, &__content {
+        padding-bottom: 5px;
+    }
+    &__title {
+        font-size: 15px;
+        position: relative;
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 1px;
+            background-color: #000;
+            top: 5px;
+            transition: all .5s linear 0s;
+        }
+        &:before {
+            -webkit-transform: rotate(40deg);
+            -moz-transform: rotate(40deg);
+            -ms-transform: rotate(40deg);
+            -o-transform: rotate(40deg);
+            transform: rotate(40deg);
+            left: 0;
+        }
+        &:after {
+            -webkit-transform: rotate(-40deg);
+            -moz-transform: rotate(-40deg);
+            -ms-transform: rotate(-40deg);
+            -o-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+            left: 8px;
+        }
+        &.active {
+            &:before {
+                background-color: #f00;
+                -webkit-transform: rotate(-40deg);
+                -moz-transform: rotate(-40deg);
+                -ms-transform: rotate(-40deg);
+                -o-transform: rotate(-40deg);
+                transform: rotate(-40deg);
+            }
+            &:after {
+                background-color: #f00;
+                -webkit-transform: rotate(40deg);
+                -moz-transform: rotate(40deg);
+                -ms-transform: rotate(40deg);
+                -o-transform: rotate(40deg);
+                transform: rotate(40deg);
+            }
+        }
+    }
+}
+@media (min-width: 772px) {
+    .item {
+        flex: 1 1 25%;
+    }
+}
