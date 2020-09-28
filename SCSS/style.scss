@@ -7,6 +7,8 @@ body {
     background-image: -o-linear-gradient(to bottom, #007878, #000078);
     background-image: linear-gradient(to bottom, #007878, #000078);
     background-repeat: no-repeat;
+}
+.title {
     text-align: center;
 }
 .catalog {
@@ -90,6 +92,16 @@ body {
                 transform: rotate(40deg);
             }
         }
+    }
+    &__content {
+        margin: 10px;
+        box-sizing: border-box;
+    }
+}
+ul {
+    li {
+        list-style: square;
+        list-style-position: inside;
     }
 }
 @media (min-width: 772px) {
